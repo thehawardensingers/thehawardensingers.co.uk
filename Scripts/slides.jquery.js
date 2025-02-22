@@ -96,8 +96,8 @@
 								direction = -width*2;
 							} else {
 							// if next is less then previous set position of next slide to left of previous
-								position = 0;
-								direction = 0;
+								position = 1;
+								direction = 2;
 							}
 							// store new current slide
 							current = next;
@@ -110,7 +110,7 @@
 						if (option.crossfade) {
 							// put hidden next above current
 							control.children(':eq('+ next +')', elem).css({
-								zIndex: 10
+								zIndex: 5
 							// fade in next
 							}).fadeIn(option.fadeSpeed, option.fadeEasing, function(){
 								if (option.autoHeight) {
